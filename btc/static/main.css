@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#header{
+  background: #1233;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo{
+  margin-left: 30px;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+nav ul li{
+  padding: 5px 15px;
+  font-size: 24px;
+  line-height: 25px;
+  margin: 0 10px
+}
+
+nav ul li a{
+  color: black;
+}
+nav ul li a:hover{
+  color: blue;
+}
+
+nav ul li:hover{
+  color: blue;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.mb {
+  background: #efffff;
+}
+
+.mb h4{
+  font-size: 20px;
+  padding: 12px;
+}
+form{
+  margin: 20px;
+  padding: 12px;
+}
+
+.cryto input {
+  width: 50%;
+  padding: 12px 12px;
+  margin: 7px 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+.btn {
+  width: auto !important;
+  color: black;
+  background: #1233;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: capitalize;
+  border: none;
+}
+
+.btn:hover, .cryto input:hover{
+  border: 1px solid gray;
+  transition: ease-in;
+}
+#result{
+  margin-left: 20px;
+  font-family: monospace;
+  margin-bottom: 20px;
+  padding: 10px
+}
+
+.live{
+  width: 40%;
+  margin-left: 20px;
+  padding: 30px;
+}
+.live h3{
+  font-size: 20px;
+  font-family: monospace;
+  color: #122333;
+  text-transform: capitalize;
+  margin-left: 15px;
+}
+.live hr{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 70%
+}
+
+.crytodiv{
+  padding: 12px;
+  font-size: 18px;
+}
+
+#crytotype{
+  padding: 5px;
+}
+
+.mobile{
+  display: none;
+}
+
+.footer{
+  background-color: #1233;
+  color: white;
+  text-align: center;
+  height: 40vh;
+  margin-top: -10px
+}

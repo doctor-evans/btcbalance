@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto balance checker | youtube video downloader | twitter media downloader | instagram media downloader</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'responsive.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous">
+    </script>
+    <script src="{% static 'main.js' %}" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="header">
+        <div class="logo">
+          <a href="/"><h2>BTC/ETH</h2></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <!-- <li><a href="#">Crypto checker</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li> -->
+          </ul>
+        </nav>
+      </header>
+      <section class="mb">
+        <div class="live">
+          <h3>Current bitcoin price: ${{ live_bitcoin_price }}</h3>
+          <hr>
+          <h3>Current Etherum price: ${{ current_price_eth }}</h3>
+        </div>
+        <h4>Enter your btc Address and submit to check your bitcoin wallet balance in 'BTC', 'USD' and 'NGN'</h4>
+        <form class="cryto" method="post" action="{% url 'btc:check' %}">
+          <div class="crytodiv">
+            <label for="crytotype">Select your cryto type:</label>
+            <select id="crytotype" name="crytotype">
+              <option value="BTC">Bitcoin</option>
+              <option value="ETH">Etherum</option>
+            </select>
+          </div>
+          {% csrf_token %}
+          <input type="text" name="address" placeholder="Enter Your BTC/ETH wallet address">
+          <input class="btn" type="submit" name="action" value="submit">
+        </form>
+        <div id="result">
+          <h3>Your address is : {{ address }}.</h3>
+          <br>
+          <table border="2" bgcolor="#efefef" width="60%" cellpadding="20" cellspacing="5" align="center">
+            <tr>
+              <th width="30%"></th>
+              <th width="30%">{{ type }}</th>
+              <th width="30%">USD</th>
+            </tr>
+            <tr>
+              <th>Balance</th>
+              <td>{{ btc_balance }}</td>
+              <td>${{ usd_balance }}</td>
+            </tr>
+          </table>
+          <div class="mobile">
+            <h3>Wallet balance:</h3>
+            <br>
+            <h3>BTC: {{ btc_balance }}</h3>
+            <br>
+            <h3>USD: {{ usd_balance }}</h3>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="footer">
+
+      </div>
+    </footer>
+  </body>
+</html>

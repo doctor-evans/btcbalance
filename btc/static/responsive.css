@@ -1,0 +1,68 @@
+@media screen and (max-width:400px) {
+  .logo{
+    margin-left: 20px;
+    line-height: 18px;
+    font-size: 18px;
+  }
+  .logo a{
+    color: black
+
+  }
+
+  nav ul li{
+    padding: 5px 15px;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 10px
+  }
+
+  .mb h4{
+    font-size: 17px;
+    padding: 8px;
+    display: none;
+  }
+  form{
+    margin: 10px;
+    padding: 6px;
+  }
+
+  .cryto input {
+    width: 100%;
+    padding: 12px 12px;
+    margin: 7px 0;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  #result{
+    margin-left: 10px;
+    font-family: monospace;
+    margin-bottom: 20px;
+    padding: 5px
+  }
+
+  .live{
+    width: 80%;
+    margin-left: 10px;
+    padding: 10px;
+  }
+  .live h3{
+    font-size: 17px;
+    font-family: monospace;
+    color: #122333;
+    text-transform: capitalize;
+    margin-left: 10px;
+  }
+  .live hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%
+  }
+  #result table{
+    display: none;
+  }
+  .mobile{
+    display: contents!important;
+  }
+
+}
